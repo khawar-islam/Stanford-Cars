@@ -1,13 +1,5 @@
 # Fine-Grained Image Classification on Stanford Cars (FGVC-Stanford Cars)
 
-<p align="center">
-    <img src="https://i.imgur.com/waxVImv.png" alt="DiffusMix">
-</p>
-
-<p align="center">
-    <img src="images/diffuseMix_flower102.png" alt="DiffusMix Treasure">
-</p>
-
 ---
 
 ## Setup
