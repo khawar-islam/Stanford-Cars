@@ -1,4 +1,4 @@
-# DiffuseMix : Label-Preserving Data Augmentation with Diffusion Models (CVPR'2024)
+# Fine-Grained Image Classification on Stanford Cars (FGVC-Stanford Cars)
 
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="DiffusMix">
@@ -18,7 +18,7 @@ conda env create --name DiffuseMix --file=environment.yml
 conda remove -n DiffuseMix --all # In case environment installation faileds
 ```
 
-## 📁 Dataset Structure
+## Dataset Structure
 ```
 train
  └─── class 1
@@ -36,7 +36,7 @@ To introduce the structural complexity, you can download fractal image dataset f
 `python3 main.py --train_dir PATH --fractal_dir PATH --prompts sunset,Autumn
 ```
 
-## 💬 Citation
+## Citation
 If you find our work useful in your research please consider citing our paper:
 ```
 @article{diffuseMix2024,
