@@ -1,7 +1,5 @@
 # Fine-Grained Image Classification on Stanford Cars (FGVC-Stanford Cars)
 
----
-
 ## Setup
 Setup anaconda environment using `environment.yml` file.
 
