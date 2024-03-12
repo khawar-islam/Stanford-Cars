@@ -10,7 +10,7 @@
 
 ---
 
-## 🚀 Getting Started
+## Setup
 Setup anaconda environment using `environment.yml` file.
 
 ```
@@ -18,20 +18,15 @@ conda env create --name DiffuseMix --file=environment.yml
 conda remove -n DiffuseMix --all # In case environment installation faileds
 ```
 
-## 📝 List of Prompts 
-Below is the list of prompts, if your accuracy is low then you can use all prompts to increase the performance. Remember that each prompt takes a time to generate images, so the best way is to start from two prompts then increase the number of prompts.
-
-```
-prompts = ["Autumn", "snowy", "watercolor art","sunset", "rainbow", "aurora",
-               "mosaic", "ukiyo-e", "a sketch with crayon"]
-```
-
 ## 📁 Dataset Structure
 ```
 train
  └─── class 1
           └───── n04355338_22023.jpg
- └─── class 2
+ └─── ...
+
+val
+ └─── class 1
           └───── n03786901_5410.jpg
  └─── ...
 ```
