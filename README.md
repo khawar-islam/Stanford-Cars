@@ -8,7 +8,7 @@ conda env create --name DiffuseMix --file=environment.yml
 conda remove -n DiffuseMix --all # In case environment installation faileds
 ```
 
-## Dataset Structure
+### Dataset Structure
 ```
 train
  └─── class 1
@@ -20,7 +20,8 @@ val
           └───── n03786901_5410.jpg
  └─── ...
 ```
-## ✨ DiffuseMix Augmentation
+### Train Examples
+
 To introduce the structural complexity, you can download fractal image dataset from here [Fractal Dataset](https://drive.google.com/drive/folders/19xNHNGFv-OChaCazBdMOrwdGRsXy2LPs/)
 ```
 `python3 main.py --train_dir PATH --fractal_dir PATH --prompts sunset,Autumn
