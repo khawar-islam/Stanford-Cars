@@ -26,13 +26,25 @@ To introduce the structural complexity, you can download fractal image dataset f
 ```
 `python3 main.py --train_dir PATH --fractal_dir PATH --prompts sunset,Autumn
 ```
+### Comparison with SOTA Mixup
+
+| Method                                              | Stanford Cars |
+|-----------------------------------------------------|---------------|
+| Vanilla<sub>(CVPR'16)</sub> ~[resnet]              | 85.52         |
+| RA<sub>(NIPS'20)</sub> ~[cubuk2020randaugment]     | 87.79         |
+| AdaAug<sub>(ICLR'22)</sub> ~[cheung2021adaaug]     | 88.49         |
+| PuzzleMix<sub>(ICML'20)</sub> ~[kim2020puzzle]     | 89.68         |
+| Co-Mixup<sub>(ICLR'21)</sub> ~[kim2020co]          | 89.53         |
+| Guided-AP<sub>(AAAI'23)</sub> ~[kang2023guidedmixup]| 90.27         |
+| **DiffuseMix**                                      | **91.26**     |
+
+
 
 ### Test on Validation Set
 
 To introduce the structural complexity, you can download fractal image dataset from here [Fractal Dataset](https://drive.google.com/drive/folders/19xNHNGFv-OChaCazBdMOrwdGRsXy2LPs/)
 ```
 Accuracy of the network on the 8041 test images: 91.23%
-
 ```
 
 
