@@ -42,7 +42,6 @@ To introduce the structural complexity, you can download fractal image dataset f
 
 ### Test on Validation Set
 
-To introduce the structural complexity, you can download fractal image dataset from here [Fractal Dataset](https://drive.google.com/drive/folders/19xNHNGFv-OChaCazBdMOrwdGRsXy2LPs/)
 ```
 Accuracy of the network on the 8041 test images: 91.23%
 ```
