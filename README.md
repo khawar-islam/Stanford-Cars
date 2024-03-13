@@ -27,6 +27,16 @@ To introduce the structural complexity, you can download fractal image dataset f
 `python3 main.py --train_dir PATH --fractal_dir PATH --prompts sunset,Autumn
 ```
 
+### Test on Validation Set
+
+To introduce the structural complexity, you can download fractal image dataset from here [Fractal Dataset](https://drive.google.com/drive/folders/19xNHNGFv-OChaCazBdMOrwdGRsXy2LPs/)
+```
+Accuracy of the network on the 8041 test images: 91.23%
+
+```
+
+
+
 ## Citation
 If you find our work useful in your research please consider citing our paper:
 ```
