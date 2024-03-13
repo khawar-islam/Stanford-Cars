@@ -28,15 +28,15 @@ To introduce the structural complexity, you can download fractal image dataset f
 ```
 ### Comparison with SOTA Mixup
 
-| Method                                              | Stanford Cars |
-|-----------------------------------------------------|---------------|
-| Vanilla<sub>(CVPR'16)</sub> ~[resnet]              | 85.52         |
-| RA<sub>(NIPS'20)</sub> ~[cubuk2020randaugment]     | 87.79         |
-| AdaAug<sub>(ICLR'22)</sub> ~[cheung2021adaaug]     | 88.49         |
-| PuzzleMix<sub>(ICML'20)</sub> ~[kim2020puzzle]     | 89.68         |
-| Co-Mixup<sub>(ICLR'21)</sub> ~[kim2020co]          | 89.53         |
-| Guided-AP<sub>(AAAI'23)</sub> ~[kang2023guidedmixup]| 90.27         |
-| **DiffuseMix**                                      | **91.26**     |
+| Method                   | Stanford Cars |
+|--------------------------|---------------|
+| Vanilla<sub>(CVPR'16)    | 85.52         |
+| RA<sub>(NIPS'20)         | 87.79         |
+| AdaAug<sub>(ICLR'22)     | 88.49         |
+| PuzzleMix<sub>(ICML'20)  | 89.68         |
+| Co-Mixup<sub>(ICLR'21)   | 89.53         |
+| Guided-AP<sub>(AAAI'23)  | 90.27         |
+| **DiffuseMix**           | **91.26**     |
 
 
 
