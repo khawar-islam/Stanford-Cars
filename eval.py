@@ -10,8 +10,8 @@ from torchvision import datasets, models, transforms
 
 
 # Paths for image directory and model
-EVAL_DIR='PATH'
-EVAL_MODEL='.PTH PATH'
+EVAL_DIR='/media/cvpr/CM_1/datasets/original_dataset/cars_dMix/val'
+EVAL_MODEL='result/max_acc.pth'
 
 # Load the model for evaluation
 num_classes = 196
@@ -52,9 +52,6 @@ class_names = ['AM General Hummer SUV 2000', 'Acura Integra Type R 2001', 'Acura
 predlist=torch.zeros(0,dtype=torch.long, device='cpu')
 lbllist=torch.zeros(0,dtype=torch.long, device='cpu')
 
-# Initialize GradCAM
-gradcam = GradCAM(model)
-
 # Evaluate the model accuracy on the dataset
 correct = 0
 total = 0
@@ -70,32 +67,6 @@ with torch.no_grad():
 
         predlist = torch.cat([predlist, predicted.view(-1).cpu()])
         lbllist = torch.cat([lbllist, labels.view(-1).cpu()])
-
-# Compute Grad-CAM visualizations outside the no_grad context
-for batch_idx, (images, labels) in enumerate(eval_loader):
-    images, labels = images.to(device), labels.to(device)
-    images.requires_grad_(True)  # Ensure gradients are computed
-
-    for idx, image in enumerate(images):
-        heatmap = gradcam.compute_heatmap(image.unsqueeze(0))
-
-        # Get the original image without normalization
-        original_image = (image.permute(1, 2, 0).cpu().detach().numpy() * np.array([0.229, 0.224, 0.225]) + np.array(
-            [0.485, 0.456, 0.406])) * 255
-        original_image = original_image.astype(np.uint8)
-
-        # Create the Grad-CAM overlay
-        overlay = gradcam.overlay_heatmap_on_image(heatmap, original_image)
-
-        # Combine original and overlay side-by-side
-        combined_image = np.hstack((original_image, overlay))
-
-        # Get the image path and extract the file name
-        image_path = eval_dataset.samples[batch_idx * bs + idx][0]
-        image_name = image_path.split("/")[-1]
-
-        # Save the combined image
-        cv2.imwrite(f"gradCAM_output/combined_{image_name}", combined_image)
 
 # Overall accuracy
 overall_accuracy=100 * correct / total
